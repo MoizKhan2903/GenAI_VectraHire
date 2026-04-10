@@ -4,8 +4,8 @@ import axios from "axios"
 // created this so that we don't want to write the base url and with credentials every time we make a request to the backend. 
 // We can just use this instance of axios and it will automatically include the base url and with credentials in every request.
 const api = axios.create({
-    baseURL: 'http://localhost:3000',
-    withCredentials: true
+  baseURL: import.meta.env.VITE_API_URL || "http://localhost:3000",
+     withCredentials:true
 })
 
 export async function register({username, email, password}){
