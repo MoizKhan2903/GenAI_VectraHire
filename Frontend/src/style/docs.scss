@@ -1,0 +1,83 @@
+$bg: #0b0b0d;
+$panel: #151517;
+$muted: hsl(240, 2%, 62%);
+$accent: #fe629e;
+$accent-2: #e1034d;
+$card: #111113;
+
+body { background: $bg; color: #e9e9ec; font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; user-select: none; }
+
+.docs-page { max-width: 420px; margin: 10px auto 80px; padding: 18px; display:flex; flex-direction:column; gap:18px; align-items:stretch }
+
+.docs-topbar { display:flex; align-items:center; gap:12px; color:$muted }
+.back-btn { background: rgba(#ff6ea6,0.06); border:0; color:$accent; font-weight:800; cursor:pointer; padding:8px 10px; border-radius:10px }
+.topbar-title { flex:1; font-weight:800; color:#fff }
+.brand { color:$accent; font-weight:800 }
+
+.docs-hero { background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01)); padding:18px; border-radius:14px; display:flex; flex-direction:column; align-items:flex-start }
+.hero-badge { display:inline-block; background:rgba(255,255,255,0.02); color:$muted; padding:6px 10px; border-radius:8px; font-size:12px; margin-bottom:12px }
+.hero-title { margin:6px 0 10px 0; font-size:32px; line-height:1.02; font-weight:800 }
+.hero-title em { color:transparent; font-style:normal; font-weight:900; background: linear-gradient(90deg, $accent-2, $accent); -webkit-background-clip: text; background-clip: text }
+.hero-sub { color:$muted; font-size:14px; margin:0 0 14px 0 }
+
+.hero-cards { display:grid; gap:12px; margin-top:12px; width:100% }
+.hero-grid { align-items:stretch; width:100% }
+.card.getting-started { background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01)); padding:16px; border-radius:14px; box-shadow: 0 10px 30px rgba(0,0,0,0.6); border: 1px solid rgba(255,255,255,0.03); display:flex; align-items:flex-start; width:100%; flex-direction:column; flex:1 }
+.card.getting-started h3 { margin:0 0 8px 0; font-size:15px }
+.card-row { display:flex; gap:12px; align-items:flex-start }
+.card-icon { width:48px; height:48px; border-radius:12px; background: linear-gradient(90deg, rgba(123,97,255,0.08), rgba(255,110,166,0.03)); display:flex; align-items:center; justify-content:center; font-size:20px }
+.card.getting-started p { margin:0; color:$muted; font-size:13px }
+
+.workflow { background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01)); padding:14px; border-radius:12px; box-shadow: 0 8px 24px rgba(0,0,0,0.45); border: 1px solid rgba(255,255,255,0.02); width:100%; display:flex; flex-direction:column; align-self:stretch }
+.workflow h4 { margin:0 0 8px 0 }
+.steps { list-style:none; padding:0; margin:0; display:flex; flex-direction:column; gap:10px }
+.steps li { background:transparent; padding:10px 12px 10px 46px; border-radius:10px; color:#fff; position:relative; border-left: 3px solid rgba(255,255,255,0.03) }
+.steps li::before { content: ''; position:absolute; left:20px; top:50%; transform:translateY(-50%); width:12px; height:12px; border-radius:50%; background: linear-gradient(90deg, $accent-2, $accent); box-shadow:0 4px 10px rgba(123,97,255,0.14) }
+.steps li span { display:block; color:$muted; margin-top:6px; font-size:13px }
+
+/* Ensure workflow sits nicely beside the main card on wide screens */
+@media (min-width:900px) {
+	.hero-grid { grid-template-columns: 1fr 360px }
+	.card.getting-started { padding-right:18px }
+	.workflow { width:320px }
+}
+
+/* ensure card icon aligns to the top of the text */
+.card-row .card-icon { margin-top:4px }
+
+.features { padding:0 }
+.features h3 { margin:0 0 8px 0 }
+.feature-grid { display:grid; grid-template-columns: 1fr; gap:12px }
+.feature-card { background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01)); padding:16px; border-radius:14px; box-shadow: 0 8px 28px rgba(0,0,0,0.55) }
+.feature-title { font-weight:700; margin-bottom:8px }
+.meter { background: rgba(0,0,0,0.18); height:12px; border-radius:999px; overflow:hidden; margin:8px 0 }
+.meter-bar { height:100%; background: linear-gradient(90deg, $accent-2, $accent); border-radius:999px }
+.meter-legend { color:$muted; font-size:12px; margin-top:8px }
+
+.feature-card.small { display:flex; gap:12px; align-items:center }
+.feature-card .icon { width:44px; height:44px; background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01)); border-radius:12px; display:flex; align-items:center; justify-content:center; font-size:18px }
+.feature-card .ftitle { font-weight:700 }
+.feature-card .fdesc { color:$muted; font-size:13px }
+
+.tech { margin-top:6px; gap: 8px; display: flex; flex-direction: column }
+.tech-grid { display:grid; grid-template-columns: 1fr 1fr 1fr; gap:10px }
+.tech-card { background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01)); padding:14px; border-radius:12px; font-size:13px; box-shadow: 0 8px 22px rgba(0,0,0,0.45) }
+.tech-card span { display:block; color:$muted; margin-top:6px; font-size:12px }
+
+.tech-icon { display:inline-flex; width:28px; height:28px; background:$panel; border-radius:8px; color:$muted; align-items:center; justify-content:center; margin-right:8px; font-weight:700 }
+
+/* responsive hero grid */
+.hero-grid { display:grid; grid-template-columns: 1fr; gap:12px }
+@media (min-width:900px) { .hero-grid { grid-template-columns: 1fr 320px } }
+
+.troubleshoot details { background:$card; padding:12px; border-radius:10px; margin-top:8px }
+.troubleshoot summary { cursor:pointer; font-weight:700 }
+.troubleshoot p { color:$muted; margin:8px 0 0 0 }
+
+/* Make the page feel taller like the screenshot */
+.docs-page { padding-bottom: 130px }
+
+@media (min-width: 900px) {
+	.docs-page { max-width: 920px }
+	.feature-grid { grid-template-columns: repeat(3, 1fr) }
+}

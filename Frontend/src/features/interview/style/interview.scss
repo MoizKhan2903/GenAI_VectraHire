@@ -1,0 +1,85 @@
+/* Interview page styles — follows theme from home.scss */
+
+*::-webkit-scrollbar{
+	display: none;
+}
+
+.interview{ width:100%; min-height:100vh; padding:36px 10px; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; background: linear-gradient(180deg,#0b0c0f 0%, #161018 60%); color:#e6e8ea; user-select: none; }
+
+.interview-header{ max-width:1160px; margin:0 auto 18px; display:flex; align-items:center; justify-content:space-between }
+.interview-header h1{ color:#fff; margin:0; font-size:24px; letter-spacing:0.2px }
+.interview-header .subtitle{ color:#9aa0a8; margin:4px 0 0 0; font-size:13px }
+
+.layout-card{ display:flex; gap:28px; width:100%; max-width:1160px; margin:0 auto  }
+
+.left-col{ width:24%; min-width:200px; display: flex; flex-direction: column; gap: 18px; }
+.center-col{ width:52% }
+.right-col{ width:24%; min-width:220px }
+
+.card{ background:#0f1113; border-radius:12px; padding:14px; border:1px solid rgba(255,255,255,0.03); box-shadow: 0 6px 18px rgba(2,3,6,0.6) }
+.big-panel{ background:linear-gradient(180deg,#0b0c0f,#0f1113); border-radius:12px; padding:18px; min-height:520px; border:1px solid rgba(255,255,255,0.02); box-shadow: inset 0 1px 0 rgba(255,255,255,0.01) }
+
+.nav-list{ display:flex; flex-direction:column; gap:14px }
+.section-btn{ background:transparent; border:none; color:#cfd6db; text-align:left; padding:12px 10px; cursor:pointer; font-weight:700; border-radius:8px; transition:all .18s ease }
+.section-btn:hover{ transform:translateX(4px); color:#fff }
+.section-btn.active{ color:#fff; background:linear-gradient(90deg,#1b1520,#2b1530); box-shadow: 0 6px 14px rgba(11,8,12,0.6) }
+
+.questions-area{ display:flex; flex-direction:column; gap:12px }
+.questions-list{ max-height:260px; overflow:auto; padding-right:6px }
+.q-item{ padding:12px; border-radius:8px; color:#d7cfe0; cursor:pointer; border:1px solid rgba(255,255,255,0.015); margin-bottom:8px; transition:transform .15s ease, background .15s ease }
+.q-item:hover{ transform:translateX(6px); background:linear-gradient(90deg,#1b1a1e,#221826) }
+.q-item.selected{ background:linear-gradient(90deg,#2b1530,#2e1636); color:#fff; box-shadow: 0 8px 20px rgba(11,8,12,0.6) }
+
+.question-detail h3{ margin:0 0 8px 0; color:#fff; font-size:16px }
+.center-muted{ text-align:center; color:#9aa0a8; padding:40px 0 }
+
+.card-head{ display:flex; align-items:center; justify-content:space-between }
+.card-head h2{ color:#fff; margin:0; font-size:14px; font-weight:700 }
+.pill{ background:rgba(255,0,110,0.12); color:#ff3b91; padding:6px 8px; border-radius:999px; font-weight:700; font-size:11px }
+
+.skill-list{ display:flex; gap:8px; flex-wrap:wrap }
+.skill-pill {
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 500;
+
+  &.high {
+    background-color: rgba(231, 76, 60, 0.15); // soft red
+    color: #e74c3c;
+  }
+
+  &.medium {
+    background-color: rgba(243, 156, 18, 0.15); // soft orange
+    color: #f39c12;
+  }
+
+  &.low {
+    background-color: rgba(46, 204, 113, 0.15); // soft green
+    color: #2ecc71;
+  }
+}
+
+.plan-day{ margin-bottom:12px }
+.plan-day h2{ font-size:13px; margin:0 }
+.prep-item{ margin-bottom:8px }
+
+.hint-text{ color:#9aa0a8; font-size:13px; margin-left: 10px; }
+.card-label{ color:#cfd6db; font-weight:700; margin-bottom:8px }
+
+.score-card{ display:flex; flex-direction:column; gap:12px }
+.match-wrap{ display:flex; flex-direction:column; gap:10px; align-items:center; justify-content:center; padding-top:8px }
+.match-circle{ width:100px; height:100px; border-radius:999px; display:flex; align-items:center; justify-content:center; box-shadow: 0 8px 20px rgba(0,0,0,0.55); position:relative }
+.match-circle::before{ content:''; position:absolute; inset:-4px; border-radius:999px; background: linear-gradient(90deg, rgba(255,0,110,0.05), rgba(228,75,214,0.02)); filter: blur(6px); opacity:0.9 }
+.match-inner{ width:74px; height:74px; border-radius:999px; background:linear-gradient(180deg,#0b0c0f,#111214); display:flex; align-items:center; justify-content:center; flex-direction:column; box-shadow: 0 6px 14px rgba(4,5,8,0.5) }
+.score-number{ color:#fff; font-weight:900; font-size:18px }
+.score-label{ color:#ff6ea8; font-weight:700; font-size:11px; margin-top:4px }
+.score-meta{ text-align:center }
+.copyright{ text-align:center; color:#9aa0a8; font-size:12px; margin-top:18px }
+
+@media (max-width:1024px){
+	.layout-card{ flex-direction:column }
+	.left-col, .center-col, .right-col{ width:100% }
+	.interview-header{ padding:0 8px }
+}
+

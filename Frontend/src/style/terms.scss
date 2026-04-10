@@ -1,0 +1,157 @@
+// Terms / Privacy page styles
+$bg: #0b0b0d;
+$panel: #151517;
+$muted: #9b9b9f;
+$accent: #ff6ea6; // pink
+$accent-2: #7b61ff; // purple
+$card: #1b1b1d;
+
+body {
+	background: $bg;
+	user-select: none;
+}
+
+.terms-page {
+	color: #e9e9ec;
+	padding: 48px 20px;
+	display: flex;
+	flex-direction: column;
+	gap: 36px;
+	align-items: center;
+}
+
+.terms-hero {
+	max-width: 920px;
+	width: 100%;
+	text-align: left;
+}
+
+.terms-title {
+	font-size: 36px;
+	line-height: 1.05;
+	margin: 0 0 12px 0;
+	color: #fff;
+}
+.terms-title span { font-weight: 600; }
+.terms-title em { color: $accent; font-style: normal; font-weight: 700; }
+
+.terms-sub {
+	color: $muted;
+	margin: 0 0 8px 0;
+}
+
+.section-heading {
+	color: #fff;
+	font-size: 18px;
+	margin: 8px 0 16px 0;
+}
+
+.card-grid {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 18px;
+	margin-bottom: 18px;
+}
+
+.card {
+	background: $card;
+	border-radius: 12px;
+	padding: 18px;
+	box-shadow: 0 6px 18px rgba(0,0,0,0.45);
+	min-height: 120px;
+}
+.card h3 { margin: 6px 0 8px 0; color: #fff; }
+.card p { margin: 0; color: $muted; font-size: 14px; }
+.card-icon { color: $accent-2; background: rgba(255,255,255,0.02); width:48px; height:48px; display:flex; align-items:center; justify-content:center; border-radius:10px; }
+
+.wide-card {
+	display: flex;
+	gap: 16px;
+	background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+	border-radius: 14px;
+	padding: 18px;
+	align-items: center;
+}
+.wide-card-left { flex: 0 0 84px; display:flex; align-items:center; justify-content:center; }
+.wide-icon { width:64px; height:64px; background:$panel; border-radius:12px; display:flex; align-items:center; justify-content:center; font-size:30px; }
+.wide-card-right h3 { margin:0 0 8px 0; }
+.wide-card-right p { margin:0 0 10px 0; color:$muted }
+.secure-pill { display:inline-block; color:$accent; font-weight:700; font-size:12px; margin-top:6px; }
+
+.terms-control { max-width: 920px; width:100%; }
+.privacy-settings {
+	margin-top: 16px;
+	background: $card;
+	border-radius: 12px;
+	padding: 22px;
+	display:flex;
+	align-items:center;
+	gap:16px;
+}
+.privacy-icon { width:72px; height:72px; background:$panel; border-radius:10px; display:flex; align-items:center; justify-content:center; font-size:28px }
+.privacy-body h4 { margin:0 0 6px 0 }
+.privacy-body p { margin:0; color:$muted }
+.btn-manage { margin-left:auto; background:#fff; color:#111; border:none; padding:10px 14px; border-radius:8px; cursor:pointer; font-weight:600 }
+
+@media (max-width: 900px) {
+	.card-grid { grid-template-columns: 1fr; }
+	.wide-card { flex-direction: column; align-items: flex-start; }
+	.wide-card-left { width:100%; }
+	.terms-page { padding: 28px 16px }
+}
+
+/* Additional styles for Terms of Service page */
+.service-page .terms-title em { color: $accent; }
+.terms-content { max-width: 980px; width:100%; display:flex; flex-direction:column; gap:18px }
+
+.panel-card { background: $card; border-radius:12px; padding:18px; display:flex; gap:14px; align-items:flex-start; box-shadow: 0 8px 20px rgba(0,0,0,0.5); }
+.panel-card .panel-body h3 { margin:0 0 6px 0 }
+.small-icon { width:44px; height:44px; background:$panel; border-radius:10px; display:flex; align-items:center; justify-content:center; font-size:18px }
+
+.two-column { display:grid; grid-template-columns: 1fr 320px; gap:18px }
+.two-column .card.dark { padding:20px }
+.two-column .card-head { display:flex; gap:10px; align-items:center; justify-content: start;}
+
+.status-image { background: linear-gradient(180deg, rgba(123,97,255,0.08), rgba(255,110,166,0.03)); border-radius:10px; display:flex; align-items:center; justify-content:center; padding:18px }
+.status-inner { color:$muted; font-size:13px; text-align:left }
+.status-title { color:$accent-2; font-weight:700; font-size:12px; margin-bottom:8px }
+.status-dot { color:$muted }
+
+.disclaimer-card { background: transparent; border-radius:12px; padding:0; display:flex; gap:18px; align-items:center }
+.disclaimer-card .disc-left { background: linear-gradient(90deg, rgba(123,97,255,0.06), rgba(255,110,166,0.03)); padding:18px; border-radius:12px; flex:1 }
+.disclaimer-card blockquote { margin:8px 0; color:$muted; font-style:italic }
+.disc-right { width:140px; display:flex; align-items:center; justify-content:center }
+.match-badge { background: $panel; color:#fff; border-radius:10px; width:100px; height:100px; display:flex; flex-direction:column; align-items:center; justify-content:center; font-size:24px; font-weight:700 }
+.match-badge span { display:block; font-size:10px; color:$muted; font-weight:600; margin-top:6px; padding: 5px; }
+
+.play-fair .pill-row { margin-top:12px; display:flex; gap:10px }
+.pill { background: rgba(255,255,255,0.02); color:$muted; padding:8px 12px; border-radius:8px; font-size:13px }
+
+@media (max-width: 900px) {
+	.two-column { grid-template-columns: 1fr; }
+	.disc-right { width:100%; display:flex; justify-content:flex-start }
+	.match-badge { width:84px; height:84px }
+}
+
+/* Helpers for Help page */
+.search-bar {
+	margin-top: 18px;
+	display: flex;
+	align-items: center;
+	gap: 12px;
+	background: $card;
+	padding: 10px 14px;
+	border-radius: 12px;
+	box-shadow: 0 6px 18px rgba(0,0,0,0.35);
+	width: 100%;
+	max-width: 720px;
+}
+.search-bar svg { opacity: 0.85 }
+.search-input { background: transparent; border: none; outline: none; color: #e9e9ec; font-size: 14px; flex: 1 }
+
+.browse-btn { margin-left: auto; background: #fff; color: #111; text-decoration: none }
+.chat-btn { margin-left: 12px; background: linear-gradient(90deg, $accent-2, $accent); color: #fff; border-radius: 8px; padding: 10px 14px; text-decoration: none; font-weight: 700 }
+
+.status-image { display:flex; align-items:center; justify-content:center; overflow: hidden; }
+
+
