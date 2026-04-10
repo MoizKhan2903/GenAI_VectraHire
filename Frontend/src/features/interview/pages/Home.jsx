@@ -4,6 +4,7 @@ import { useInterview } from '../hooks/useInterview.js'
 import { useAuth } from '../../auth/hooks/useAuth.js'
 import { useNavigate } from 'react-router'
 import { APP_NAME } from '../../../appConstants.js'
+import { Link } from 'react-router'
 
 const Home = () => {
 
@@ -170,11 +171,9 @@ const Home = () => {
 
             {/* Page Footer */}
             <footer className='page-footer'>
-                <a
-                
-                 href='/privacy'>Privacy Policy</a>
-                <a href='/terms'>Terms of Service</a>
-                <a href='/help'>Help Center</a>
+                <Link to='/privacy'>Privacy Policy</Link>
+    <Link to='/terms'>Terms of Service</Link>
+    <Link to='/help'>Help Center</Link>
 
             </footer>
             <div><p>{APP_NAME} &copy; {new Date().getFullYear()}. All rights reserved.</p></div>
